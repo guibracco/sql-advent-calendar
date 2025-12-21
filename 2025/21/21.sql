@@ -7,7 +7,6 @@
 -- Concise Query
 select 
     log_date,
-    stories_shared,
     sum(stories_shared) over (order by log_date) as running_total_stories
     -- Default window frame is used here
 from 
